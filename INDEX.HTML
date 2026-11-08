@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart School</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<header>
+    <h1>🏫 SMART SCHOOL</h1>
+    <p>Making Our School Better, Together.</p>
+
+    <h2>Welcome to the Future of School Management!</h2>
+
+    <p>
+        A student-powered platform designed to improve
+        communication, solve school problems, encourage
+        creativity and build a greener campus.
+    </p>
+
+    <p>💡 Share Ideas | 📝 Report Problems | 🌱 Make a Difference</p>
+</header>
+
+<nav class="main-nav">
+    <a href="#complaintForm">📝 Complaints</a>
+    <a href="#learningQuestion">🤖 AI Assistant</a>
+    <a href="#lostFoundForm">🔍 Lost & Found</a>
+    <a href="#suggestionForm">💡 Suggestions</a>
+    <a href="#announcementList">📢 Announcements</a>
+    <a href="#ecoActivity">🌱 Eco Tracker</a>a>
+    <a href="#adminPanel" onclick="toggleAdmin(); return false;">
+    📊 Admin Dashboard
+</a>
+</nav>
+
+
+<main>
+
+    <h2>Report a School Problem</h2>
+    <p>Help us make our school a better place!</p>
+
+    <form id="complaintForm">
+        <label>Student Name</label>
+        <input type="text" id="studentName" placeholder="Enter your name" required>
+
+        <label>Problem Category</label>
+        <select id="category" required>
+            <option value="">Select a category</option>
+            <option>Classroom</option>
+            <option>Drinking Water</option>
+            <option>Washroom</option>
+            <option>Electricity</option>
+            <option>Cleanliness</option>
+            <option>Other</option>
+        </select>
+
+        <label>School Location</label>
+        <input type="text" id="location" placeholder="Example: Room 9A" required>
+        
+<label>Complaint Priority</label>
+<select id="priority" required>
+    <option value="">Choose priority</option>
+    <option value="High">🔴 High</option>
+    <option value="Medium">🟡 Medium</option>
+    <option value="Low">🟢 Low</option>
+</select>
+
+
+        <label>Describe the Problem</label>
+        <textarea id="description" placeholder="Explain the problem..." required></textarea>
+
+        <button type="submit">Submit Complaint</button>
+    </form>
+
+    <h2>Submitted Complaints</h2>
+    <div id="complaintList"></div>
+
+    <button type="button" onclick="toggleAdmin()">Open Admin Dashboard</button>
+
+   
+<section id="adminPanel" hidden>
+    <h2>📊 Management Dashboard</h2>
+    <p>Welcome to the Smart School Management Centre.</p>
+
+    <div class="stats-container">
+        <div class="stat-card">
+            <h3>📋 Total Complaints</h3>
+            <p id="totalCount">0</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>⏳ Pending</h3>
+            <p id="pendingCount">0</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>🔄 In Progress</h3>
+            <p id="progressCount">0</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>✅ Resolved</h3>
+            <p id="resolvedCount">0</p>
+        </div>
+    </div>
+
+   
+<h2>📝 Manage Student Complaints</h2>
+
+<input
+    type="text"
+    id="complaintSearch"
+    placeholder="🔎 Search complaints..."
+>
+
+<select id="priorityFilter">
+    <option value="">All Priorities</option>
+    <option value="High">High</option>
+    <option value="Medium">Medium</option>
+    <option value="Low">Low</option>
+</select>
+
+<select id="statusFilter">
+    <option value="">All Statuses</option>
+    <option value="Pending">Pending</option>
+    <option value="In Progress">In Progress</option>
+    <option value="Resolved">Resolved</option>
+</select>
+
+<div id="adminComplaintList"></div>
+
+
+    <hr>
+
+    <h2>📢 Post a School Announcement</h2>
+
+    <form id="announcementForm">
+        <label>Announcement Title</label>
+        <input
+            type="text"
+            id="announcementTitle"
+            placeholder="Enter announcement title"
+            required
+        >
+
+        <label>Announcement Message</label>
+        <textarea
+            id="announcementMessage"
+            placeholder="Write your announcement here..."
+            required
+        ></textarea>
+
+        <button type="submit">📢 Publish Announcement</button>
+    </form>
+</section>
+
+    <hr>
+
+    <!-- FEATURE 1: AI LEARNING ASSISTANT -->
+   
+<section id="learningAssistant">
+    <h2>🤖 AI Learning Assistant</h2>
+    <p>Your friendly study companion! Ask questions and explore new topics.</p>
+
+    <div class="suggested-questions">
+        <h3>💡 Try asking:</h3>
+        <button type="button" onclick="useQuestion('What is photosynthesis?')">
+            🌱 Photosynthesis
+        </button>
+        <button type="button" onclick="useQuestion('Explain gravity.')">
+            🌍 Gravity
+        </button>
+        <button type="button" onclick="useQuestion('What is the water cycle?')">
+            💧 Water Cycle
+        </button>
+        <button type="button" onclick="useQuestion('Explain fractions.')">
+            ➗ Fractions
+        </button>
+    </div>
+
+    <input
+        type="text"
+        id="learningQuestion"
+        placeholder="Type your question here..."
+    >
+
+    <button type="button" id="askQuestion">Ask Question 🚀</button>
+
+    <div id="learningAnswer" aria-live="polite">
+        <p>Your answer will appear here!</p>
+    </div>
+</section>
+
+
+    <hr>
+
+    <!-- FEATURE 2: LOST AND FOUND -->
+    <section>
+        <h2>🔎 Lost and Found</h2>
+        <p>Report an item you have lost or found.</p>
+
+        <form id="lostFoundForm">
+            <label>Item Name</label>
+            <input type="text" id="itemName" placeholder="Example: Water bottle" required>
+
+            <label>Report Type</label>
+            <select id="itemType" required>
+                <option value="">Choose one</option>
+                <option>Lost</option>
+                <option>Found</option>
+            </select>
+
+            <label>Where was it lost or found?</label>
+            <input type="text" id="itemLocation" required>
+
+            <button type="submit">Submit Report</button>
+        </form>
+
+        <div id="lostFoundList"></div>
+    </section>
+
+    <hr>
+
+    <!-- FEATURE 3: STUDENT SUGGESTION BOX -->
+    <section>
+        <h2>💡 Student Suggestion Box</h2>
+        <p>Share your ideas to improve our school.</p>
+
+        <form id="suggestionForm">
+            <label>Your Suggestion</label>
+            <textarea id="suggestionText"
+                      placeholder="Write your idea here..." required></textarea>
+
+            <button type="submit">Send Suggestion</button>
+        </form>
+
+        <div id="suggestionList"></div>
+    </section>
+
+    <hr>
+
+    <!-- FEATURE 4: SCHOOL ANNOUNCEMENTS -->
+    <section>
+        <h2>📢 School Announcements</h2>
+        <p>Stay updated with important school news.</p>
+
+        <div id="announcementList"></div>
+    </section>
+
+    <hr>
+
+    <!-- FEATURE 5: ECO SCHOOL TRACKER -->
+    <section>
+        <h2>🌱 Eco-School Tracker</h2>
+        <p>Let's make our school greener!</p>
+
+        <label>Select an eco-friendly activity</label>
+        <select id="ecoActivity">
+            <option value="">Choose an activity</option>
+            <option>Planted a Tree</option>
+            <option>Recycled Waste</option>
+            <option>Saved Water</option>
+            <option>Saved Electricity</option>
+            <option>Cleaned the School</option>
+        </select>
+
+        <button type="button" id="ecoButton">Record Activity</button>
+
+        <h3>Total Eco Points: <span id="ecoPoints">0</span></h3>
+        <div id="ecoActivityList"></div>
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

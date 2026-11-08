@@ -1,0 +1,438 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    color: #243047;
+}
+
+header {
+    background: #123b70;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin-top: 10px;
+    color: #dceaff;
+}
+
+main {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+h2 {
+    color: #123b70;
+    margin-bottom: 12px;
+    margin-top: 15px;
+}
+
+main > p {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd5df;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+button {
+    background: #1769aa;
+    color: white;
+    border: none;
+    padding: 13px 22px;
+    margin-top: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #0d477b;
+}
+
+#complaintList {
+    margin-top: 20px;
+}
+
+.complaint {
+    background: #edf4fc;
+    padding: 15px;
+    margin-top: 12px;
+    border-radius: 8px;
+    border-left: 4px solid #1769aa;
+    overflow-wrap: anywhere;
+}
+
+.complaint p {
+    margin-top: 7px;
+}
+
+.status {
+    color: #a36a00;
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+    main {
+        margin: 20px 12px;
+        padding: 20px;
+    }
+}
+#adminPanel[hidden] {
+    display: none;
+}
+
+.admin-card {
+    background: #f5f8fc;
+    padding: 18px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: 1px solid #dce5ef;
+}
+
+.admin-card select {
+    margin-top: 12px;
+}
+
+.admin-card h3 {
+    color: #123b70;
+    margin-bottom: 10px;
+}
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.stat-card {
+    background: #eaf2fc;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border-bottom: 4px solid #1769aa;
+}
+
+.stat-card h3 {
+    color: #123b70;
+    font-size: 15px;
+}
+
+.stat-card p {
+    font-size: 30px;
+    font-weight: bold;
+    color: #1769aa;
+    margin-top: 10px;
+}
+
+@media (max-width: 400px) {
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* SMART SCHOOL BONUS FEATURES */
+
+main > section {
+    background: #ffffff;
+    padding: 22px;
+    margin-top: 25px;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+main > hr {
+    border: none;
+    border-top: 1px solid #dce5ef;
+    margin: 28px 0;
+}
+
+main > section h2 {
+    color: #123b70;
+    margin-bottom: 12px;
+}
+
+main > section p {
+    color: #526477;
+    margin-bottom: 15px;
+}
+
+main > section button {
+    margin-top: 12px;
+}
+
+#learningAnswer,
+#lostFoundList,
+#suggestionList,
+#announcementList,
+#ecoActivityList {
+    margin-top: 18px;
+}
+
+.feature-card {
+    background: #f0f6fc;
+    border-left: 4px solid #1769aa;
+    border-radius: 8px;
+    padding: 14px;
+    margin-top: 12px;
+}
+
+.feature-card h3 {
+    color: #123b70;
+    margin-bottom: 8px;
+}
+
+#ecoPoints {
+    color: #21834a;
+    font-size: 26px;
+}
+
+@media (max-width: 600px) {
+    main > section {
+        padding: 15px;
+    }
+}
+
+/* SMART SCHOOL - PROFESSIONAL THEME */
+
+body {
+    background: #f1f5fb;
+    color: #26364a;
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(120deg, #102d59, #1769aa);
+    color: white;
+    padding: 45px 20px;
+    text-align: center;
+    border-bottom: 5px solid #55b8e8;
+}
+
+header h1 {
+    font-size: 38px;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #e1efff;
+    font-size: 16px;
+}
+
+main {
+    max-width: 950px;
+    margin: 35px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(24, 55, 90, 0.08);
+}
+
+main h2 {
+    color: #123b70;
+    font-size: 23px;
+    margin-top: 15px;
+}
+
+main > section {
+    border: 1px solid #e0eaf5;
+    transition: box-shadow 0.2s ease;
+}
+
+main > section:hover {
+    box-shadow: 0 6px 20px rgba(24, 55, 90, 0.10);
+}
+
+input, select, textarea {
+    border: 1px solid #cbd8e8;
+    border-radius: 9px;
+    padding: 13px;
+    background: #fbfdff;
+    font-size: 15px;
+    transition: border-color 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #1769aa;
+    box-shadow: 0 0 0 3px rgba(23, 105, 170, 0.12);
+}
+
+button {
+    background: linear-gradient(120deg, #1769aa, #12477f);
+    border-radius: 9px;
+    padding: 12px 20px;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(18, 71, 127, 0.2);
+}
+
+.feature-card {
+    border: 1px solid #dce9f7;
+    border-left: 5px solid #2584c7;
+    background: #f6faff;
+}
+
+.admin-card {
+    border: 1px solid #dce5ef;
+    background: #f6faff;
+}
+
+.stats-container {
+    gap: 16px;
+}
+
+.stat-card {
+    border: 1px solid #dce9f7;
+    border-bottom: 4px solid #1769aa;
+}
+
+#ecoPoints {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+@media (max-width: 650px) {
+    main {
+        margin: 15px;
+        padding: 18px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+}
+
+/* SMART SCHOOL - MOBILE RESPONSIVE DESIGN */
+
+@media screen and (max-width: 768px) {
+
+    body {
+        padding: 10px;
+    }
+
+    main {
+        width: 100%;
+        padding: 15px;
+    }
+
+    header {
+        padding: 25px 15px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header h2 {
+        font-size: 20px;
+    }
+
+    input,
+    textarea,
+    select,
+    button {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+
+    .stats-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .stat-card {
+        min-width: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* SMART SCHOOL NAVIGATION BAR */
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 18px;
+    background: #12345a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.main-nav a:hover {
+    background: #20b8a6;
+    transform: translateY(-2px);
+}
+
+/* PREVENT NAVIGATION BAR FROM HIDING SECTION HEADINGS */
+
+html {
+    scroll-padding-top: 100px;
+}
+
+#complaintForm,
+#learningQuestion,
+#lostFoundForm,
+#suggestionForm,
+#announcementList,
+#ecoActivity,
+#adminPanel {
+    scroll-margin-top: 100px;
+}
